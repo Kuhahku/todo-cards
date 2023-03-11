@@ -52,5 +52,13 @@ export const useTodoListStore = defineStore('todoList', () => {
       }
     }
   }
-  return { id, todoList, getTodo, getTodos }
+  function deleteTodo(id: number) {
+    for (const todo of todoList) {
+      if (todo.id == id) {
+        const index = todoList.indexOf(todo)
+        todoList.splice(index, 1)
+      }
+    }
+  }
+  return { id, todoList, getTodo, getTodos, deleteTodo }
 })
