@@ -14,6 +14,11 @@ const router = createRouter({
       props: (route) => ({ page: route.query.page || '1' })
     },
     {
+      path: '/add',
+      name: 'add-card',
+      component: () => import('@/views/AddCardView.vue')
+    },
+    {
       path: '/card/:id',
       name: 'card-details',
       props: true,

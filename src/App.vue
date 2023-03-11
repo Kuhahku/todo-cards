@@ -23,6 +23,7 @@ import { RouterLink, RouterView } from 'vue-router'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -31,6 +32,10 @@ h1 {
 
 h2 {
   font-size: 1.25rem;
+}
+a {
+  text-decoration: none;
+  color: #2c3e50;
 }
 
 nav {

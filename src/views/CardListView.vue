@@ -29,10 +29,10 @@ function hasNextPage(num: number = 3) {
 
 <template>
   <div class="cards">
-    <div class="add-card">
+    <RouterLink class="add-card" :to="{ name: 'add-card' }">
       <img src="@/assets/plus.svg" alt="+" />
       <p>Add new card</p>
-    </div>
+    </RouterLink>
     <TodoCard v-for="todo in pageTodoList" :key="todo.id" :todo="todo" />
     <div class="pagination">
       <RouterLink
@@ -91,8 +91,9 @@ function hasNextPage(num: number = 3) {
 
 .pagination a {
   flex: 1;
-  text-decoration: none;
-  color: #2c3e50;
+}
+.pagination a:hover {
+  transform: scale(1.01);
 }
 
 #page-prev {
