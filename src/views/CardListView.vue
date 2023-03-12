@@ -31,7 +31,7 @@ function hasNextPage(num: number = 3) {
   <div class="cards">
     <RouterLink class="add-card" :to="{ name: 'add-card' }">
       <img src="@/assets/plus.svg" alt="+" />
-      <p>Add new card</p>
+      <p>Add a card</p>
     </RouterLink>
     <TodoCard v-for="todo in pageTodoList" :key="todo.id" :todo="todo" />
     <div class="pagination">
