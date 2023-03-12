@@ -15,8 +15,12 @@ const showEdit = ref(false)
 function triggerDone(todo: Todo) {
   todo.complete = !todo.complete
 }
+
 function triggerDelete(todo: Todo) {
-  deleteTodo(todo.id)
+  const isConfirm = confirm('Confirm deletion of this card?')
+  if (isConfirm) {
+    deleteTodo(todo.id)
+  }
 }
 </script>
 
